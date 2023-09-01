@@ -36,3 +36,6 @@ echo "# remove ls and directory completion highlight color" >> ~/.zshrc
 echo "_ls_colors=':ow=01;33'" >> ~/.zshrc
 echo 'zstyle ":completion:*:default" list-colors "${(s.:.)_ls_colors}"' >> ~/.zshrc
 echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
+
+# change default shell to zsh
+sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
