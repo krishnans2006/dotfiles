@@ -119,29 +119,27 @@ export NVM_DIR="$HOME/.nvm"
 # nvm end
 
 # pnpm
-export PNPM_HOME="/home/krishnan/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 [ -s "$PNPM_HOME" ] && export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # python user base binary directory
-export PYTHON_USER_BASE="/home/krishnan/.local/bin"
-export PATH="$PYTHON_USER_BASE:$PATH"
+export PYTHON_USER_BASE="$HOME/.local/bin"
+[ -s "$PYTHON_USER_BASE" ] && export PATH="$PYTHON_USER_BASE:$PATH"
 # python user base binary directory end
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+[ -s "$PYENV_ROOT" ] && export PATH="$PYENV_ROOT/bin:$PATH"
+[ -s "$PYENV_ROOT" ] && eval "$(pyenv init -)"
+[ -s "$PYENV_ROOT" ] && eval "$(pyenv virtualenv-init -)"
 # pyenv end
 
 # jetbrains toolbox
-export TOOLBOX_HOME="/home/krishnan/.local/share/JetBrains/Toolbox/scripts"
-export PATH="$TOOLBOX_HOME:$PATH"
+export TOOLBOX_HOME="$HOME/.local/share/JetBrains/Toolbox/scripts"
+[ -s "$TOOLBOX_HOME" ] && export PATH="$TOOLBOX_HOME:$PATH"
 # jetbrains toolbox end
 
 # gitlab cli
 export GITLAB_HOST=gitlab.tjhsst.edu
 # gitlab cli end
-
-#source deactivate &> /dev/null
