@@ -143,3 +143,9 @@ export TOOLBOX_HOME="$HOME/.local/share/JetBrains/Toolbox/scripts"
 # gitlab cli
 export GITLAB_HOST=gitlab.tjhsst.edu
 # gitlab cli end
+
+# modular cli
+export MODULAR_HOME="/home/krishnan/.modular"
+export MOJO_BIN="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin"
+[ -s "$MODULAR_HOME" ] && [ -s "$MOJO_BIN" ] && export PATH="$MOJO_BIN:$PATH"
+# modular cli end
