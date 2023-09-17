@@ -21,6 +21,11 @@ echo "-----------------------------------------------------------"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "==========================================================="
+echo "             cloning history-sync                          "
+echo "-----------------------------------------------------------"
+git clone https://github.com/wulfgarpro/history-sync.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/history-sync
+
+echo "==========================================================="
 echo "             import zshrc                                  "
 echo "-----------------------------------------------------------"
 cat .zshrc > $HOME/.zshrc

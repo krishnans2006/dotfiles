@@ -77,7 +77,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-auto-fetch poetry zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-auto-fetch poetry zsh-autosuggestions zsh-syntax-highlighting history-sync)
 GIT_AUTO_FETCH_INTERVAL=86400
 
 source $ZSH/oh-my-zsh.sh
@@ -111,6 +111,13 @@ export EDITOR="nano"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# history-sync
+ZSH_HISTORY_FILE="${HOME}/.zsh_history"
+ZSH_HISTORY_PROJ="${HOME}/.zsh_history_proj"
+ZSH_HISTORY_FILE_ENC_NAME="zsh_history"
+ZSH_HISTORY_COMMIT_MSG="History until $(date)"
+# history-sync end
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
