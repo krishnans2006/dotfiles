@@ -80,6 +80,8 @@ alias autoclicker='xdotool click --repeat 1000 --delay 10 1'  # Clicks 1000 time
 
 alias xclip='xclip -selection c'  # Remap xclip to copy to clipboard instead of primary selection
 
+alias reset-textedit='rm ~/.local/share/org.gnome.TextEditor/session.gvariant'  # When GNOME Text Editor is stuck on binary files
+
 alias school='cd ~/School'  # Shortcut to School directory
 alias tech='cd ~/Tech'  # Shortcut to Tech directory
 alias hobby='cd ~/Tech/Hobby'
