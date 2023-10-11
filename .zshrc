@@ -112,6 +112,13 @@ export EDITOR="nano"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# CUSTOM
+
+# update dotfiles on shell exit
+zshexit() {
+    [ -s "$HOME/dotfiles" ] && git -C "$HOME/dotfiles" pull
+}
+
 # histignorespace
 setopt histignorespace
 
