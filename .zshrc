@@ -112,6 +112,9 @@ export EDITOR="nano"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# histignorespace
+setopt histignorespace
+
 # history-sync
 ZSH_HISTORY_FILE="${HOME}/.zsh_history"
 ZSH_HISTORY_PROJ="${HOME}/.zsh_history_proj"
