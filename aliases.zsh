@@ -82,9 +82,14 @@ alias xclip='xclip -selection c'  # Remap xclip to copy to clipboard instead of 
 
 alias reset-textedit='rm ~/.local/share/org.gnome.TextEditor/session.gvariant'  # When GNOME Text Editor is stuck on binary files
 
-alias school='cd ~/School'  # Shortcut to School directory
-alias tech='cd ~/Tech'  # Shortcut to Tech directory
-alias hobby='cd ~/Tech/Hobby'
+alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+
+alias s='cd ~/School'  # Shortcut to School directory
+alias sm='cd ~/School/multi'
+alias sml='cd ~/School/ML'
+alias sq='cd ~/School/quantum'
+alias t='cd ~/Tech'  # Shortcut to Tech directory
+alias th='cd ~/Tech/Hobby'
 
 alias piserver='ssh -J serveo.net krishnan@krishnans2006'  # SSH into my Raspberry Pi server, proxied through serveo.net
 alias piserver-local='ssh krishnan@piserver.local'
