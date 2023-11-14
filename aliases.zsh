@@ -83,6 +83,7 @@ alias xclip='xclip -selection c'  # Remap xclip to copy to clipboard instead of 
 
 alias reset-textedit='rm ~/.local/share/org.gnome.TextEditor/session.gvariant'  # When GNOME Text Editor is stuck on binary files
 
+alias discord-update='curl -L https://discord.com/api/download/stable\?platform\=linux\&format\=deb --output ~/Downloads/discord.deb && sudo apt install ~/Downloads/discord.deb && rm ~/Downloads/discord.deb'
 alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 
 alias s='cd ~/School'  # Shortcut to School directory
