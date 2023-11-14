@@ -75,6 +75,7 @@ git-all() {
 }
 
 alias dc='docker compose'  # Docker Compose
+alias pmpy='python manage.py'  # Django manage.py
 
 alias autoclicker='xdotool click --repeat 1000 --delay 10 1'  # Clicks 1000 times with a delay of 10ms between each click
 
