@@ -74,6 +74,8 @@ git-all() {
     done | tqdm --total $(echo "$found" | wc -l) >> /dev/null
 }
 
+alias g-size='git gc && git count-objects -vH | grep size'
+
 alias dc='docker compose'  # Docker Compose
 alias pmpy='python manage.py'  # Django manage.py
 
