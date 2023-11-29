@@ -152,6 +152,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 [ -s "$PYENV_ROOT" ] && eval "$(pyenv virtualenv-init -)"
 # pyenv end
 
+# rust
+export RUST_ROOT="$HOME/.cargo"
+[ -s "$RUST_ROOT" ] && export PATH="$RUST_ROOT/bin:$PATH"
+# rust end
+
+# go
+export GO_ROOT="/usr/local/go"
+[ -s "$GO_ROOT" ] && export PATH="$GO_ROOT/bin:$PATH"
+# go end
+
 # jetbrains toolbox
 export TOOLBOX_HOME="$HOME/.local/share/JetBrains/Toolbox/scripts"
 [ -s "$TOOLBOX_HOME" ] && export PATH="$TOOLBOX_HOME:$PATH"
@@ -162,7 +172,12 @@ export GITLAB_HOST=gitlab.tjhsst.edu
 # gitlab cli end
 
 # modular cli
-export MODULAR_HOME="/home/krishnan/.modular"
+export MODULAR_HOME="$HOME/.modular"
 export MOJO_BIN="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin"
 [ -s "$MODULAR_HOME" ] && [ -s "$MOJO_BIN" ] && export PATH="$MOJO_BIN:$PATH"
 # modular cli end
+
+# bob neovim
+export BOB_NVIM="$HOME/.local/share/bob/nvim-bin"
+[ -s "$BOB_NVIM" ] && export PATH="$BOB_NVIM:$PATH"
+# bob neovim end
