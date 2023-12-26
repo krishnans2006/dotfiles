@@ -88,6 +88,15 @@ alias reset-textedit='rm ~/.local/share/org.gnome.TextEditor/session.gvariant'  
 alias discord-update='curl -L https://discord.com/api/download/stable\?platform\=linux\&format\=deb --output ~/Downloads/discord.deb && sudo apt install ~/Downloads/discord.deb && rm ~/Downloads/discord.deb'
 alias vencord='echo Y | sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 
+spotify-download() {
+    cd ~/Music/Spotify
+    source venv/bin/activate
+    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" "$1"
+    deactivate
+    cd - > /dev/null
+}
+alias spotify-download-all='spotify-download https://open.spotify.com/playlist/38qI4lF92GABqrAUrkP3qb'
+
 alias s='cd ~/School'  # Shortcut to School directory
 alias sm='cd ~/School/multi'
 alias sml='cd ~/School/ML'
