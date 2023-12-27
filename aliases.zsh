@@ -91,11 +91,17 @@ alias vencord='echo Y | sh -c "$(curl -sS https://raw.githubusercontent.com/Vend
 spotify-download() {
     cd ~/Music/Spotify
     source venv/bin/activate
-    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" "$1"
+    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" sync songs.spotdl
     deactivate
     cd - > /dev/null
 }
-alias spotify-download-all='spotify-download https://open.spotify.com/playlist/38qI4lF92GABqrAUrkP3qb'
+spotify-redownload() {
+    cd ~/Music/Spotify
+    source venv/bin/activate
+    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" "https://open.spotify.com/playlist/38qI4lF92GABqrAUrkP3qb"
+    deactivate
+    cd - > /dev/null
+}
 
 alias s='cd ~/School'  # Shortcut to School directory
 alias sm='cd ~/School/multi'
