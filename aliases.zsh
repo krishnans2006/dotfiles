@@ -7,6 +7,16 @@ alias rc='nano ~/.zshrc'  # Edit the shell config file
 alias refresh='source ~/.zshrc'  # Refresh the shell after editing one of the above files
 alias p10krc='nano ~/.p10k.zsh'  # Edit the Powerlevel10k config file
 
+HISTORY_PUSH=$(cat <<-EOF
+krishnan
+y
+y
+y
+EOF
+)
+
+alias history-push='echo "$HISTORY_PUSH" | zhps'
+
 # UTILITY
 
 alias commands='nano ~/Downloads/UbuntuApps/COMMANDS.txt'  # To keep track of installed apt packages
