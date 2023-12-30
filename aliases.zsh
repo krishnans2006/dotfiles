@@ -15,7 +15,8 @@ y
 EOF
 )
 
-alias history-push='echo "$HISTORY_PUSH" | zhps'
+alias history-push='echo "$HISTORY_PUSH" | history_sync_push'  # history_sync_push is the old `zhps` alias
+alias zhps='history-push'
 
 # UTILITY
 
