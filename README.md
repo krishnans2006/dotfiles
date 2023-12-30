@@ -23,3 +23,4 @@ Future plans:
   - More functionality
   - Selective functionality (ifttt, using info like current distro)
   - User-selected functionality (Proper Y/N parsing, possibly argparse)
+- Improve filenames and directory structure
