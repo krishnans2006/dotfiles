@@ -101,7 +101,7 @@ alias pmpy='python manage.py'  # Django manage.py
 
 alias autoclicker='xdotool click --repeat 1000 --delay 10 1'  # Clicks 1000 times with a delay of 10ms between each click
 
-alias xclip='xclip -selection c'  # Remap xclip to copy to clipboard instead of primary selection
+alias copy='xclip -selection c'  # Clipboard
 
 alias reset-textedit='rm ~/.local/share/org.gnome.TextEditor/session.gvariant'  # When GNOME Text Editor is stuck on binary files
 
@@ -171,7 +171,7 @@ raw-passcard() {
 # Decrypt a passcard, copy it, and optionally print it to the terminal (primarily for shell usage)
 p() {
     password=$(gpg -d ~/Tech/tjCSL/keybase-passcard/passwords/"$1".txt.gpg 2>/dev/null)
-    echo "$password" | xclip
+    echo "$password" | copy
     if [[ "$2" != "" ]]
     then
         echo "$password"
