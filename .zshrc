@@ -129,16 +129,16 @@ ZSH_HISTORY_FILE_ENC_NAME="zsh_history"
 ZSH_HISTORY_COMMIT_MSG="History until $(date)"
 # history-sync end
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+[ -s "$PNPM_HOME" ] && export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # nvm end
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-[ -s "$PNPM_HOME" ] && export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 
 # python user base binary directory
 export PYTHON_USER_BASE="$HOME/.local/bin"
