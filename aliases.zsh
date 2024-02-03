@@ -117,14 +117,24 @@ doc-img() {
 spotify-download() {
     cd ~/Music/Spotify
     source venv/bin/activate
-    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" sync songs.spotdl
-    deactivate
-    cd - > /dev/null
-}
-spotify-redownload() {
-    cd ~/Music/Spotify
-    source venv/bin/activate
-    spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "songs/{list-position} - {artist} - {album} - {title}" "https://open.spotify.com/playlist/38qI4lF92GABqrAUrkP3qb"
+
+    ulimit -n 16384  # Fixes ERROR: [requests] Unexpected error: OSError: [Errno 24] Too many open files
+
+    lists=( "songs" "classical" )
+    if [[ "$1" != "" ]]
+    then
+        lists=( "$@" )
+    fi
+
+    echo "Downloading ${lists[*]}"
+
+    for list in "${lists[@]}"
+    do
+        spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "${list}/{list-position} - {artist} - {album} - {title}" sync "${list}.spotdl"
+    done
+
+    ulimit -n 1024
+
     deactivate
     cd - > /dev/null
 }
