@@ -120,7 +120,7 @@ spotify-download() {
 
     ulimit -n 16384  # Fixes ERROR: [requests] Unexpected error: OSError: [Errno 24] Too many open files
 
-    lists=( "songs" "classical" "jams" )
+    lists=( "songs" "classical" "jams" "youtubers" )
     if [[ "$1" != "" ]]
     then
         lists=( "$@" )
