@@ -129,6 +129,10 @@ ZSH_HISTORY_FILE_ENC_NAME="zsh_history"
 ZSH_HISTORY_COMMIT_MSG="History until $(date)"
 # history-sync end
 
+# ardupilot
+[ -s "$HOME/Tech/TJUAV/ardupilot/Tools/completion" ] && source "$HOME/Tech/TJUAV/ardupilot/Tools/completion/completion.zsh"
+# ardupilot end
+
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 [ -s "$PNPM_HOME" ] && export PATH="$PNPM_HOME:$PATH"
