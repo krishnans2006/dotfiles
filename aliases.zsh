@@ -2,6 +2,8 @@
 
 alias "$"=''  # Useful for ignoring the `$` when copy-pasting certain commands from the web, does not work on bash
 
+alias sudo='sudo '  # Check for aliases when using sudo
+
 alias al='nano ~/.oh-my-zsh/custom/aliases.zsh'  # Edit the aliases file
 alias rc='nano ~/.zshrc'  # Edit the shell config file
 alias refresh='source ~/.zshrc'  # Refresh the shell after editing one of the above files
