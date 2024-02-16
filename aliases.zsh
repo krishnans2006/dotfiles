@@ -116,30 +116,7 @@ doc-img() {
     curl "$URL" -o - | xclip -selection c -target image/png
 }
 
-spotify-download() {
-    cd ~/Music/Spotify
-    source venv/bin/activate
-
-    ulimit -n 16384  # Fixes ERROR: [requests] Unexpected error: OSError: [Errno 24] Too many open files
-
-    lists=( "songs" "classical" "jams" "youtubers" "movies" "christmas" "theme-songs" )
-    if [[ "$1" != "" ]]
-    then
-        lists=( "$@" )
-    fi
-
-    echo "Downloading ${lists[*]}"
-
-    for list in "${lists[@]}"
-    do
-        spotdl --log-level DEBUG --threads 16 --user-auth --dont-filter-results --output "${list}/{list-position} - {artist} - {album} - {title}" sync "${list}.spotdl"
-    done
-
-    ulimit -n 1024
-
-    deactivate
-    cd - > /dev/null
-}
+alias spotify-download="$HOME/Music/Spotify/download.sh"
 
 alias s='cd ~/School'  # Shortcut to School directory
 alias sm='cd ~/School/multi'
