@@ -120,6 +120,7 @@ alias spotify-download="$HOME/Music/Spotify/download.sh"
 
 alias s='cd ~/School'  # Shortcut to School directory
 alias sm='cd ~/School/multi'
+alias sl='cd ~/School/linear'
 alias sml='cd ~/School/ML'
 alias sq='cd ~/School/quantum'
 alias t='cd ~/Tech'  # Shortcut to Tech directory
