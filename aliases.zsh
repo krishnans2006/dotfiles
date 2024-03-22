@@ -129,7 +129,7 @@ alias th='cd ~/Tech/Hobby'
 alias piserver='ssh -J serveo.net krishnan@krishnans2006'  # SSH into my Raspberry Pi server, proxied through serveo.net
 alias piserver-local='ssh krishnan@piserver.local'
 
-alias gcloudvm='gcloud compute ssh krishnans2006@personal --project personal-vmserver --zone us-central1-f --ssh-key-file ~/.ssh/id_ed25519'
+alias gcloudvm='gcloud compute ssh krishnan@personal --project personal-vmserver --zone us-central1-f --ssh-key-file ~/.ssh/id_ed25519'
 
 # TJUAV
 
