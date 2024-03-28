@@ -114,10 +114,15 @@ export EDITOR="nano"
 
 # CUSTOM
 
-# update dotfiles on shell exit
+# Update dotfiles on shell exit
 zshexit() {
     [ -s "$HOME/dotfiles" ] && git -C "$HOME/dotfiles" fetch origin main && git -C "$HOME/dotfiles" reset --hard origin/main
 }
+
+# Remove history file size limit
+export HISTSIZE=1000000000
+export SAVEHIST="$HISTSIZE"
+setopt EXTENDED_HISTORY
 
 # histignorespace
 setopt histignorespace
