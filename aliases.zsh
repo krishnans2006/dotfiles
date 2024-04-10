@@ -426,6 +426,7 @@ tjans() {
 
 # Quickly deploy tin using the ansible playbook
 deploy-tin() {
+    read -s -k "?Create a GitHub release at https://github.com/tjcsl/tin/releases/new, then press ENTER to deploy..."
     tjans tin -p tin -v tin -t tin-django
 }
 
