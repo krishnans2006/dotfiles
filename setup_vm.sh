@@ -56,6 +56,11 @@ git pull --set-upstream origin main
 touch ~/.zsh_history
 zsh -ic "zhpl"
 
+## Oracle Cloud Network Configuration
+# sudo iptables -I INPUT -j ACCEPT
+# echo 'iptables-save > /etc/iptables/rules.v4' | sudo bash
+## END
+
 printf "%s " "Setup complete. Press ENTER to reboot."
 read
 
