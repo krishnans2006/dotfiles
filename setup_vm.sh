@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install git nano python3 python3-pip python3-venv python-is-python3 -y
+sudo apt install git nano tree python3 python3-pip python3-venv python-is-python3 -y
 sudo apt install traceroute iputils-ping bind9-host nmap -y
 
 git config --global user.name "Krishnan Shankar"
