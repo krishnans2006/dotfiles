@@ -233,7 +233,7 @@ tjans() {
     echo "$SSHPASS"
 
     export VAULTPASS=$(raw-passcard "$VAULT_PASS_NAME"_vault)
-    echo "#!/bin/bash" > "$TEMP_FILE"
+    echo "#!/usr/bin/env bash" > "$TEMP_FILE"
     echo 'echo $VAULTPASS' >> "$TEMP_FILE"
     chmod +x "$TEMP_FILE"
 
