@@ -26,6 +26,26 @@ gc-past() {
     unset GIT_COMMITTER_DATE
 }
 
+## Wireguard
+vpnon() {
+    default="tjcsl"
+    if [ "$1" != "" ]
+    then
+        sudo systemctl start wg-quick-"$1"
+    else
+        sudo systemctl start wg-quick-"$default"
+    fi
+}
+vpnoff() {
+    default="tjcsl"
+    if [ "$1" != "" ]
+    then
+        sudo systemctl stop wg-quick-"$1"
+    else
+        sudo systemctl stop wg-quick-"$default"
+    fi
+}
+
 
 # Folders
 
