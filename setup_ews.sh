@@ -40,3 +40,7 @@ rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -s ~/.dotfiles/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+
+printf "%s " "Make sure SSO is configured for this key (https://github.com/settings/keys), then press ENTER to continue"
+read
+git clone git@github.com:krishnans2006/classes.git ~/School
