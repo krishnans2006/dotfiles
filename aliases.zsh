@@ -87,7 +87,7 @@ git-all() {
     done | tqdm --total $(echo "$found" | wc -l) >> /dev/null
 }
 
-alias g-size='git gc && git count-objects -vH | grep size'
+alias g-size='git gc --quiet && git count-objects -vH | grep "size-pack "'
 
 gc-past() {
     export GIT_AUTHOR_DATE="$1"

@@ -17,7 +17,7 @@ alias dc='docker compose'  # Docker Compose
 alias pmpy='python manage.py'  # Django manage.py
 
 ## Git/GitHub
-alias g-size='git gc && git count-objects -vH | grep size'
+alias g-size='git gc --quiet && git count-objects -vH | grep "size-pack "'
 
 gc-past() {
     export GIT_AUTHOR_DATE="$1"
