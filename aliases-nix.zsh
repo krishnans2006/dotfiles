@@ -58,6 +58,11 @@ alias 120='cd ~/School/24Fall/ECE120'
 alias 213='cd ~/School/24Fall/MATH213'
 alias 285='cd ~/School/24Fall/MATH285'
 
+alias 210='cd ~/School/25Spring/ECE210'
+alias 220='cd ~/School/25Spring/ECE220'
+alias 313='cd ~/School/25Spring/ECE313'
+alias 314='cd ~/School/25Spring/ECE314'
+
 ## Tech
 alias t='cd ~/Tech'
 alias th='cd ~/Tech/Hobby'
