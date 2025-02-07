@@ -196,3 +196,8 @@ export OCI_BIN="$HOME/bin"
 [ -s "$OCI_BIN" ] && export PATH="$OCI_BIN:$PATH"
 [[ -e "/home/krishnan/lib/oracle-cli/lib/python3.11/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/krishnan/lib/oracle-cli/lib/python3.11/site-packages/oci_cli/bin/oci_autocomplete.sh"
 # oci cli end
+
+# git-subrepo
+export GIT_SUBREPO_ROOT="$HOME/.git-subrepo"
+[ -s "$GIT_SUBREPO_ROOT" ] && source "$HOME/.git-subrepo/.rc"
+# git-subrepo end
