@@ -12,6 +12,8 @@ copy() {
     fi
 }
 
+alias copy-cmd='fc -ln -1 | copy'  # Copy the last command to the clipboard
+
 ## Command Abbreviations
 alias dc='docker compose'  # Docker Compose
 alias pmpy='python manage.py'  # Django manage.py
