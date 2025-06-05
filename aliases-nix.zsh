@@ -189,7 +189,8 @@ tjssh() {
 tjans() {
     # Run a tjCSL ansible playbook intelligently (using ssh passcards, vault password files, etc.)
     ANSIBLE_DIR="/home/krishnan/Tech/tjCSL/ansible"
-    TEMP_FILE="/home/krishnan/.ansible-playbook-runner.sh"
+    CONN_FILE="/home/krishnan/.ansible-playbook-runner-1.sh"
+    VAULT_FILE="/home/krishnan/.ansible-playbook-runner-2.sh"
 
     NUM_FORKS="100"
     CONNECT_USER="root"
@@ -259,16 +260,18 @@ tjans() {
     set -- "${other_args[@]}"
 
     export SSHPASS=$(raw-passcard "$SSH_PASS_NAME")
-    echo "$SSHPASS"
+    echo "#!/usr/bin/env bash" > "$CONN_FILE"
+    echo 'echo $SSHPASS' >> "$CONN_FILE"
+    chmod +x "$CONN_FILE"
 
     export VAULTPASS=$(raw-passcard "$VAULT_PASS_NAME"_vault)
-    echo "#!/usr/bin/env bash" > "$TEMP_FILE"
-    echo 'echo $VAULTPASS' >> "$TEMP_FILE"
-    chmod +x "$TEMP_FILE"
+    echo "#!/usr/bin/env bash" > "$VAULT_FILE"
+    echo 'echo $VAULTPASS' >> "$VAULT_FILE"
+    chmod +x "$VAULT_FILE"
 
     echo RUNNING COMMAND: "\n"    ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
     git -C "$ANSIBLE_DIR" pull
-    ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts --ask-pass --vault-password-file "$TEMP_FILE" -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
+    ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts --connection-password-file "$CONN_FILE" --vault-password-file "$VAULT_FILE" -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
 }
 
 deploy-tin() {
