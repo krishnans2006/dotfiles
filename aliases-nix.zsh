@@ -61,16 +61,18 @@ vpnoff() {
 # Folders
 
 ## Classes
-alias 106='cd ~/School/24Fall/ANTH106'
-alias 110='cd ~/School/24Fall/ECE110'
-alias 120='cd ~/School/24Fall/ECE120'
-alias 213='cd ~/School/24Fall/MATH213'
-alias 285='cd ~/School/24Fall/MATH285'
+alias 106='cd ~/School/24_25Fall/ANTH106'
+alias 110='cd ~/School/24_25Fall/ECE110'
+alias 120='cd ~/School/24_25Fall/ECE120'
+alias 213='cd ~/School/24_25Fall/MATH213'
+alias 285='cd ~/School/24_25Fall/MATH285'
 
-alias 210='cd ~/School/25Spring/ECE210'
-alias 220='cd ~/School/25Spring/ECE220'
-alias 313='cd ~/School/25Spring/ECE313'
-alias 314='cd ~/School/25Spring/ECE314'
+alias 210='cd ~/School/24_25Spring/ECE210'
+alias 220='cd ~/School/24_25Spring/ECE220'
+alias 313='cd ~/School/24_25Spring/ECE313'
+alias 314='cd ~/School/24_25Spring/ECE314'
+
+alias 225='cd ~/School/25_26Fall/CS225'
 
 ## Tech
 alias t='cd ~/Tech'
