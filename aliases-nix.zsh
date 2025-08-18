@@ -1,5 +1,12 @@
 # Utility
 
+## Nix/NixOS
+devf() {
+    echo "use flake" > .envrc
+
+    direnv allow .
+}
+
 ## General
 alias indent="sed 's/^/  /'"
 
