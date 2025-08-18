@@ -114,6 +114,9 @@ export EDITOR="nano"
 
 # CUSTOM
 
+# GPG fix for remote
+export GPG_TTY=$TTY
+
 # Update dotfiles on shell exit
 zshexit() {
     [ -s "$HOME/dotfiles" ] && git -C "$HOME/dotfiles" fetch origin main && git -C "$HOME/dotfiles" reset --hard origin/main
