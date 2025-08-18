@@ -2,6 +2,9 @@
 
 ## Nix/NixOS
 devf() {
+    [[ -s flake.nix ]] && git add flake.nix
+    [[ -s flake.lock ]] && git add flake.lock
+
     echo "use flake" > .envrc
 
     direnv allow .
