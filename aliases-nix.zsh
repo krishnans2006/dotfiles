@@ -76,6 +76,9 @@ alias 313='cd ~/School/24_25Spring/ECE313'
 alias 314='cd ~/School/24_25Spring/ECE314'
 
 alias 225='cd ~/School/25_26Fall/CS225'
+alias 385='cd ~/School/25_26Fall/ECE385'
+alias 391='cd ~/School/25_26Fall/ECE391'
+alias 370='cd ~/School/25_26Fall/PHYS370'
 
 ## Tech
 alias t='cd ~/Tech'
