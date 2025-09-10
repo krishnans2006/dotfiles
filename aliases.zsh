@@ -126,6 +126,22 @@ alias sq='cd ~/School/quantum'
 alias t='cd ~/Tech'  # Shortcut to Tech directory
 alias th='cd ~/Tech/Hobby'
 
+alias 106='cd ~/School/24_25Fall/ANTH106'
+alias 110='cd ~/School/24_25Fall/ECE110'
+alias 120='cd ~/School/24_25Fall/ECE120'
+alias 213='cd ~/School/24_25Fall/MATH213'
+alias 285='cd ~/School/24_25Fall/MATH285'
+
+alias 210='cd ~/School/24_25Spring/ECE210'
+alias 220='cd ~/School/24_25Spring/ECE220'
+alias 313='cd ~/School/24_25Spring/ECE313'
+alias 314='cd ~/School/24_25Spring/ECE314'
+
+alias 225='cd ~/School/25_26Fall/CS225'
+alias 385='cd ~/School/25_26Fall/ECE385'
+alias 391='cd ~/School/25_26Fall/ECE391'
+alias 370='cd ~/School/25_26Fall/PHYS370'
+
 alias piserver='ssh -J serveo.net krishnan@krishnans2006'  # SSH into my Raspberry Pi server, proxied through serveo.net
 alias piserver-local='ssh krishnan@piserver.local'
 
