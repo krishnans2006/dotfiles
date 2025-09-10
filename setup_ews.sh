@@ -44,3 +44,6 @@ ln -s ~/.dotfiles/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 printf "%s " "Make sure SSO is configured for this key (https://github.com/settings/keys), then press ENTER to continue"
 read
 git clone --recurse-submodules git@github.com:krishnans2006/classes.git ~/School
+
+echo 'export SHELL="/bin/zsh"' | tee --append ~/.bashrc ~/.profile > /dev/null
+echo 'exec "/bin/zsh"' | tee --append ~/.bashrc ~/.profile > /dev/null
