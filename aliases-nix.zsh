@@ -40,6 +40,22 @@ gc-past() {
     unset GIT_COMMITTER_DATE
 }
 
+# Git Submodule Update Subrepo Update
+gsusu() {
+    if [ "$1" != "" ]
+    then
+        COMMIT_MSG=$(git -C "$1" log -1 --pretty='format:%B' HEAD)
+        git subrepo pull "$1" -m "$COMMIT_MSG"
+        git push
+        git add .
+        git commit -m "Bump $1 submodule"
+        sleep 30
+        git push
+    else
+        echo "Usage: gsusu <path/to/subrepo>"
+    fi
+}
+
 ## Wireguard
 vpnon() {
     default="tjcsl"
