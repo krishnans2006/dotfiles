@@ -50,7 +50,7 @@ gsusu() {
     if [ "$1" != "" ] && [ "$2" != "" ]
     then
         COMMIT_MSG=$(git -C "$2" log -1 --pretty='format:%B' HEAD)
-        git subrepo pull "$1" -m "$COMMIT_MSG"
+        git subrepo pull "$1" -m "[$1] $COMMIT_MSG"
         git push
         git add .
         git commit -m "Bump $2 submodule"
