@@ -47,17 +47,17 @@ gc-past() {
 
 # Git Submodule Update Subrepo Update
 gsusu() {
-    if [ "$1" != "" ]
+    if [ "$1" != "" ] && [ "$2" != "" ]
     then
-        COMMIT_MSG=$(git -C "$1" log -1 --pretty='format:%B' HEAD)
+        COMMIT_MSG=$(git -C "$2" log -1 --pretty='format:%B' HEAD)
         git subrepo pull "$1" -m "$COMMIT_MSG"
         git push
         git add .
-        git commit -m "Bump $1 submodule"
+        git commit -m "Bump $2 submodule"
         sleep 30
         git push
     else
-        echo "Usage: gsusu <path/to/subrepo>"
+        echo "Usage: gsusu <path/to/subrepo> <path/to/submodule>"
     fi
 }
 
