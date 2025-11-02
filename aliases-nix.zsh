@@ -49,9 +49,16 @@ gc-past() {
 gsusu() {
     if [ "$1" != "" ] && [ "$2" != "" ]
     then
+        # Pull submodule
+        cd "$2" || return
+        git pull
+        cd ~- || return
+        # Extract submodule commit message
         COMMIT_MSG=$(git -C "$2" log -1 --pretty='format:%B' HEAD)
+        # Update subrepo
         git subrepo pull "$1" -m "[$1] $COMMIT_MSG"
         git push
+        # Bump submodule
         git add .
         git commit -m "Bump $2 submodule"
         sleep 30
