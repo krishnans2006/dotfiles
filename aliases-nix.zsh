@@ -29,6 +29,9 @@ mkcd() {
     cd "$1"
 }
 
+## Typos
+alias ks="ls"
+
 ## Command Abbreviations
 alias dc='docker compose'  # Docker Compose
 alias pmpy='python manage.py'  # Django manage.py
