@@ -62,10 +62,13 @@ gsusu() {
         git subrepo pull "$1" -m "[$1] $COMMIT_MSG"
         git push
         # Bump submodule
-        git add .
-        git commit -m "Bump $2 submodule"
-        sleep 30
-        git push
+        if [ "$3" = "" ]
+        then
+            git add .
+            git commit -m "Bump $2 submodule"
+            sleep 30
+            git push
+        fi
     else
         echo "Usage: gsusu <path/to/subrepo> <path/to/submodule>"
     fi
