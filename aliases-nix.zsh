@@ -64,7 +64,7 @@ gsusu() {
         # Bump submodule
         if [ "$3" = "" ]
         then
-            git add .
+            git add $2
             git commit -m "Bump $2 submodule"
             sleep 30
             git push
