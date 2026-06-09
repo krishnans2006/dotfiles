@@ -1,0 +1,53 @@
+! Enforce 256 color palette mode
+xterm*termName: xterm-256color
+
+! Ctrl Shift V
+XTerm*selectToClipboard: true
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key>C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key>V: insert-selection(CLIPBOARD)
+
+! -------------------------------------------------------------------
+! KDE KONSOLE (BREEZE DARK) THEME FOR XTERM
+! -------------------------------------------------------------------
+
+! Core Window Properties
+xterm*background:       #232627
+xterm*foreground:       #fcfcfc
+xterm*cursorColor:      #3daee9
+xterm*reverseVideo:     false
+
+! Fonts (Konsole standard typography)
+xterm*faceName:         Hack:style=Regular
+xterm*faceSize:         10
+xterm*renderFont:       true
+
+! Colors 0-7 (Normal)
+xterm*color0:           #232627
+xterm*color1:           #ed1515
+xterm*color2:           #11d116
+xterm*color3:           #f67400
+xterm*color4:           #1d99f3
+xterm*color5:           #9b59b2
+xterm*color6:           #1abc9c
+xterm*color7:           #fcfcfc
+
+! Colors 8-15 (Intense / Bright)
+xterm*color8:           #7f8c8d
+xterm*color9:           #c0392b
+xterm*color10:          #1cdc9a
+xterm*color11:          #fdbc4b
+xterm*color12:          #3daee9
+xterm*color13:          #8e44ad
+xterm*color14:          #16a085
+xterm*color15:          #ffffff
+
+! Modern Visual Behavior
+xterm*scrollbar:        false
+xterm*geometry:         80x24
+xterm*saveLines:        10000
+
+! Completely turn off the left gray scrollbar
+! xterm*scrollBar: false
+xterm.VT100.scrollBar: false
+XTerm*scrollBar: false
