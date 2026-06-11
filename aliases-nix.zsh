@@ -48,6 +48,30 @@ gc-past() {
     unset GIT_COMMITTER_DATE
 }
 
+# Git Checkout + Track
+gct() {
+    if [ -z "$1" ]; then
+        echo "Usage: gct <branch-name>" >&2
+        return 1
+    fi
+
+    # Try current branch's upstream remote
+    REMOTE=$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>/dev/null | cut -d/ -f1)
+
+    # If no upstream, use first remote from `git remote -v`
+    if [ -z "$REMOTE" ]; then
+        REMOTE=$(git remote -v 2>/dev/null | awk 'NR==1 {print $1}')
+    fi
+
+    if [ -z "$REMOTE" ]; then
+        echo "No git remote found." >&2
+        return 1
+    fi
+
+    echo "Using remote: $REMOTE"
+    git checkout --track "$REMOTE/$1"
+}
+
 # Git Submodule Update Subrepo Update
 gsusu() {
     if [ "$1" != "" ] && [ "$2" != "" ]
