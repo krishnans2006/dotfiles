@@ -322,7 +322,7 @@ tjans() {
 
     echo RUNNING COMMAND: "\n"    ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
     git -C "$ANSIBLE_DIR" pull
-    ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts --connection-password-file "$CONN_FILE" --vault-password-file "$VAULT_FILE" -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
+    , ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts --connection-password-file "$CONN_FILE" --vault-password-file "$VAULT_FILE" -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
 }
 
 deploy-tin() {
